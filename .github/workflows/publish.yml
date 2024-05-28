@@ -1,5 +1,6 @@
 #https://github.com/actions/starter-workflows/blob/main/pages/jekyll-gh-pages.yml
 name: Publish
+on:
   push:
     branches: ["main"]
 #
@@ -17,7 +18,6 @@ permissions:
 concurrency:
   group: "pages"
   cancel-in-progress: false
-jobs:
 jobs:
   # Build job
   build:
